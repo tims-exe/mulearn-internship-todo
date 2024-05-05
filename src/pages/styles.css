@@ -1,0 +1,89 @@
+body{
+    background-color: rgb(214, 171, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8%;
+    margin: 0px;
+    width: 100%;
+}
+
+.header{
+    color: black;
+}
+
+.new-task{
+    background-color: white;
+    display: flex;
+    padding-inline: 5%;
+    margin-bottom: 10%;
+    border-radius: 5px;
+    width: 350px;
+}
+.input-task{
+    padding-block: 5%;
+    padding-left: 5%;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.main-task{
+    background-color: white;
+    width: 400px;
+    border-radius: 5px;
+    max-height: 350px;
+    overflow-y: scroll;
+    overflow-x: hidden;    
+    scrollbar-width: none;
+}
+
+.task-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(228, 228, 228);
+    background-color: white;
+    padding-inline: 5%;
+    width: 350px;
+}
+.container-left{
+    display: flex;
+}
+.task-title{
+    padding-inline: 5%;
+}
+.close-button {
+    width: 25px;
+    height: 25px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+}
+
+.close-icon{
+    width: 25px;
+    height: 25px;
+}
+
+
+
+@media(max-width: 500px){
+    body{
+        width: auto;
+    }
+    .new-task{
+        width: 250px;
+    }
+    .task-container{
+        width: 250px;
+    }
+    .main-task{
+        width: 278px;
+    }
+}

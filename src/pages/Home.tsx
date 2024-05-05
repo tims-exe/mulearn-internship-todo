@@ -1,5 +1,7 @@
 import React, { ChangeEvent, TableHTMLAttributes, useEffect, useState } from 'react'
 import { useLocalStorage } from './LocalStorage';
+import './styles.css'
+import Tasks from './Components/Tasks';
 
 const Home = () => {
   const { getItem, setItem, removeItem } = useLocalStorage('value');
@@ -27,11 +29,25 @@ const Home = () => {
 
   return (
     <div>
-        <input type="text" placeholder='New task' name='title' value={task} onChange={handleChange}/>
-        {/* <input type="text" placeholder='Deadline in days' name='date' onChange={handleChange}/> */}
-        <button onClick={addTask}>Add Task</button>
+        <p className='header'>TODO</p>
+        <div className="new-task">
+            <input type="checkbox" />
+            <input 
+                type="text" 
+                placeholder='New task' 
+                name='title' 
+                value={task} 
+                onChange={handleChange}
+                className='input-task'
+            />
+        </div>
+        <div className='main-task'>
+            <Tasks title="test"/>
+        </div>
+        
+        {/* <button onClick={addTask}>Add Task</button>
         <button onClick={() => console.log(getItem())}>Get Task</button>
-        <button onClick={() => removeItem()}>Remove Task</button>
+        <button onClick={() => removeItem()}>Remove Task</button> */}
     </div>
   )
 }
